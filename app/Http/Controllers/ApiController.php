@@ -22,7 +22,7 @@ class ApiController extends Controller
         try {
             $url = "http://api.openweathermap.org/data/2.5/weather";
             $apiKey = env('OPENWEATHERMAP_KEY');
-            $response = Http::get("http://api.openweathermap.org/data/2.5/weather?q=San%20Mateo,ES&appid=91cef7f7d40209dd422d53a28f69d547&units=metric&lang=es");
+            $response = Http::get("http://api.openweathermap.org/data/2.5/weather?q=San%20Mateo,ES&appid=&units=metric&lang=es");
             
             if ($response->successful()) {
                 $data = $response->json();
